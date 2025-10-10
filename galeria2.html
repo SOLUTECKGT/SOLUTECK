@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Galería - SOLUTECK</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .galeria-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+    .galeria-container h1 {
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    .volver {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: .7rem 1.2rem;
+      background: var(--accent);
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="galeria-container">
+    <h1>Muestra de nuestros trabajos</h1>
+    <div class="galeria">
+      <img src="electricidad/img1.jpg" alt="Trabajo 1">
+      <img src="electricidad/img2.jpg" alt="Trabajo 2">
+      <img src="electricidad/img3.jpg" alt="Trabajo 3">
+      <img src="electricidad/img4.jpeg" alt="Trabajo 4">
+      <img src="electricidad/img5.jpeg" alt="Trabajo 5">
+      <img src="electricidad/img6.jpeg" alt="Trabajo 6">
+      <img src="electricidad/img7.jpeg" alt="Trabajo 7">
+      <img src="electricidad/img8.jpg" alt="Trabajo 8">
+      <img src="electricidad/img9.jpg" alt="Trabajo 9">
+      <img src="electricidad/img10.jpg" alt="Trabajo 10">
+      <img src="electricidad/img11.jpg" alt="Trabajo 11">
+      <img src="electricidad/img12.jpg" alt="Trabajo 12">
+
+    </div>
+
+    <a href="index.html" class="volver">← Volver al inicio</a>
+  </div>
+</body>
+</html>

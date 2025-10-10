@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SOLUTECK</title>
+  <meta name="description" content="Sitio de ejemplo creado con Visual Studio Code y Live Server.">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- 🔹 Librería de íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    /* 🔹 Estilos para mostrar el logo junto al título */
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-container img {
+      height: 50px;
+      width: auto;
+      border-radius: 8px;
+    }
+
+    .logo-container h1 {
+      font-size: 1.8rem;
+      margin: 0;
+      color: #003366;
+    }
+
+    /* 🔹 Sección contacto extra */
+    .contacto-extra {
+      text-align: center;
+      background-color: #ffffff;
+      padding: 50px 20px;
+      border-radius: 10px;
+      margin: 40px auto;
+      max-width: 900px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .contacto-extra h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #05339C;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .contacto-extra p {
+      color: #444;
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    .redes-contacto {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .icono {
+      text-decoration: none;
+      color: white;
+      background-color: #05339C;
+      padding: 14px 26px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+    }
+
+    .icono:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    .icono.whatsapp { background-color: #25D366; }
+    .icono.gmail { background-color: #EA4335; }
+    .icono.facebook { background-color: #1877F2; }
+    .icono.instagram { background-color: #E4405F; }
+
+    .icono i {
+      font-size: 2.4rem; /* 🔹 Íconos grandes */
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo-container">
+        <img src="Imagenes/img principal.png" alt="Logo de SOLUTECK">
+        <h1 class="logo">SOLUTECK</h1>
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio" class="hero">
+    <div class="container">
+      <h2>BIENVENIDO A SOLUTECK</h2>
+      <p>En Soluteck cuidamos tu confort y tu seguridad.
+      Ofrecemos instalación y mantenimientos correctivos y preventivos de aires acondicionados, además de servicios de electricidad profesional.</p>
+      <a class="btn" href="#contacto">Contáctame</a>
+    </div>
+  </section>
+
+  <section class="info-empresa container">
+    <div class="info-buttons">
+      <a href="mision.html" class="btn-info">Misión</a>
+      <a href="vision.html" class="btn-info">Visión</a>
+      <a href="valores.html" class="btn-info">Valores</a>
+    </div>
+  </section>
+
+  <section class="gallery container">
+    <h2>Muestra de nuestros trabajos</h2>
+    <div class="main-image">
+      <a href="galeria.html">
+        <img src="Imagenes/Diseño_sin_título__4_-removebg-preview.png" alt="Trabajo de aire acondicionado">
+      </a>
+      <a href="galeria2.html">
+        <img src="electricidad/Diseño_sin_título__5_-removebg-preview.png" alt="Trabajo de electricidad">
+      </a>
+    </div>
+  </section>
+
+  <section id="servicios" class="cards container">
+    <article class="card">
+      <h3>Aire Acondicionado</h3>
+      <p class="benefits">
+        ✅ Aire más limpio y saludable<br>
+        ✅ Mayor durabilidad de tu equipo<br>
+        ✅ Mantenimiento preventivo que evita costosas reparaciones
+      </p>
+
+      <p class="description">
+        Ofrecemos soluciones completas en instalación, mantenimiento y reparación de sistemas de aire acondicionado.
+        Trabajamos con equipos residenciales y comerciales, asegurando el máximo rendimiento, eficiencia energética y confort en cada espacio.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="card-electricidad">
+        <h3><b>Electricidad</b></h3>
+        <p class="beneficios">
+          ✅ Detección y solución de fallas eléctricas<br>
+          ✅ Optimización del consumo energético<br>
+          ✅ Mantenimiento, reparación e instalación de sistemas eléctricos
+        </p>
+
+        <p class="descripcion">
+          Ofrecemos un servicio seguro, confiable y profesional para tu hogar o negocio. 
+          Nos aseguramos de que tus instalaciones eléctricas funcionen con máxima eficiencia y seguridad, 
+          brindándote la tranquilidad que mereces.
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!-- 🔹 SECCIÓN DE CONTACTO CON ÍCONOS -->
+  <section id="contacto" class="contacto-extra">
+    <div class="container">
+      <h2>Comunícate con nosotros</h2>
+      <p>Si deseas más información o necesitas solicitar un servicio, contáctanos directamente a través de los siguientes medios:</p>
+
+      <div class="redes-contacto">
+        <a href="https://wa.me/50254273693?text=¡Hola!%20Deseo%20más%20información%20sobre%20sus%20servicios." target="_blank" class="icono whatsapp">
+          <i class="fab fa-whatsapp"></i> WhatsApp
+        </a>
+
+        <a href="mailto:soluteck45@gmail.com?subject=Consulta%20de%20servicio%20Soluteck&body=Hola%20Soluteck,%0D%0AQuisiera%20más%20información%20sobre%20sus%20servicios%20de%20instalación%20o%20mantenimiento.%0D%0A%0D%0AGracias." class="icono gmail">
+          <i class="fas fa-envelope"></i> Gmail
+        </a>
+
+        <a href="https://www.facebook.com/Grsolutec?locale=es_LA" target="_blank" class="icono facebook">
+          <i class="fab fa-facebook-f"></i> Facebook
+        </a>
+
+        <a href="https://www.instagram.com/soluteckguatemala?utm_source=ig_web_button_share_sheet&igsh=MW5wYnliNHF2OHp6OQ==" target="_blank" class="icono instagram">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> SOLUTECK</div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
