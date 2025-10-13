@@ -4,7 +4,7 @@
   background-position: center;    /* Centra la imagen */
   background-repeat: no-repeat;   /* Evita que se repita */
   background-attachment: fixed;   /* Efecto elegante: fondo fijo al hacer scroll */
-  color: white;                   /* Contraste del texto */
+  color: #ffffff;                   /* Contraste del texto */
   text-align: center;
   padding: 120px 20px;            /* Espacio interno */
   position: relative;
@@ -50,7 +50,7 @@ body {
 
 /* ===== HEADER ===== */
 .header {
-  background:#fff;
+  background:#ffffff;
   box-shadow:0 1px 4px rgba(0,0,0,0.06);
 }
 .header .container {
@@ -82,16 +82,16 @@ body {
   color:var(--text);
 }
 
-/* Títulos hero con Poppins */
+/* Títulos hero con Archivo Black */
 .hero h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Archivo Black', sans-serif;
   font-size:3rem;
   margin-bottom:.5rem;
 }
 
-/* Botones con Poppins */
+/* Botones con Archivo Black */
 .btn {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Archivo Black', sans-serif;
   display:inline-block;
   margin-top:1rem;
   padding:.6rem 1rem;
