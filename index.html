@@ -86,12 +86,29 @@
     .gallery {
       text-align: center;
       padding: 50px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Fondo de partículas */
+    #particles-js {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fcfcfc;
+      background-size: cover;
+      background-position: 50% 50%;
+      z-index: -1;
     }
 
     .gallery h2 {
       font-size: 2rem;
       margin-bottom: 30px;
       color: #000;
+      position: relative;
+      z-index: 1;
     }
 
     .main-image {
@@ -99,6 +116,8 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 40px;
+      position: relative;
+      z-index: 1;
     }
 
     .galeria-btn {
@@ -218,8 +237,10 @@
     </div>
   </section>
 
-  <!-- 🔹 GALERÍA CON ANIMACIÓN -->
-  <section class="gallery container">
+  <!-- 🔹 GALERÍA CON ANIMACIÓN Y PARTÍCULAS -->
+<section class="gallery">
+  <div id="particles-js"></div> <!-- Fondo animado -->
+  <div class="container">
     <h2>Muestra de nuestros trabajos</h2>
     <div class="main-image">
       <a href="galeria.html" class="galeria-btn">
@@ -232,7 +253,8 @@
         <span>Electricidad</span>
       </a>
     </div>
-  </section>
+  </div>
+</section>
 
   <section id="servicios" class="cards container">
     <article class="card">
@@ -295,6 +317,8 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
   </script>
 </body>
 </html>
