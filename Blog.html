@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog - SOLUTECK</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff;
+      color: #003366;
+      line-height: 1.6;
+    }
+
+    header, footer {
+      background-color: #004aad;
+      padding: 15px 0;
+      text-align: center;
+      color: #fff;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #fff;
+    }
+
+    /* 🔹 Contenedor general */
+    .container {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    /* 🔹 Cuadro con imagen y texto */
+    .info-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #f8f9ff;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 50px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      gap: 30px;
+    }
+
+    .info-box img {
+      width: 45%;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .info-box .texto {
+      width: 55%;
+    }
+
+    .info-box h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #004aad;
+    }
+
+    .info-box p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #003366;
+    }
+
+    /* 🔹 Variante izquierda y derecha */
+    .info-box.izquierda {
+      flex-direction: row;
+    }
+
+    .info-box.derecha {
+      flex-direction: row-reverse;
+    }
+
+    /* 🔹 Botón volver */
+    .btn-volver {
+      display: inline-block;
+      background-color: #004aad;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .btn-volver:hover {
+      background-color: #0073ff;
+      transform: scale(1.05);
+    }
+
+    /* 🔹 Responsivo */
+    @media (max-width: 900px) {
+      .info-box {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .info-box img, .info-box .texto {
+        width: 100%;
+      }
+
+      .info-box img {
+        margin-bottom: 20px;
+      }
+    }
+
+    /* 🔹 Efecto fade-in al hacer scroll */
+.info-box {
+  opacity: 0;           /* Inicialmente invisible */
+  transform: translateY(30px); /* Se desplaza hacia abajo */
+  transition: all 0.6s ease-out;
+}
+
+.info-box.visible {
+  opacity: 1;
+  transform: translateY(0); /* Vuelve a su posición normal */
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>SOLUTECK</h1>
+  </header>
+
+  <div class="container">
+    
+    <!-- 🔸 Cuadro 1: Quienes Somos -->
+    <div class="info-box izquierda">
+      <img src="Imagenes/img27.jpg" alt="Equipo Soluteck">
+      <div class="texto">
+        <h2>Quienes Somos</h2>
+        <p>
+          En Soluteck nos especializamos en ofrecer soluciones integrales de confort y seguridad para hogares, empresas y proyectos industriales.
+Contamos con más de 10 años de experiencia brindando servicios de instalación, mantenimiento y reparación de sistemas de aire acondicionado y servicios eléctricos profesionales.
+
+Nuestro equipo técnico está altamente capacitado para garantizar resultados eficientes, seguros y duraderos, adaptándonos a las necesidades de cada cliente.
+En Soluteck creemos en la excelencia, la responsabilidad y la confianza, valores que nos han permitido construir relaciones sólidas con nuestros clientes a lo largo de los años.
+        </p>
+      </div>
+    </div>
+
+    <!-- 🔸 Cuadro 2: Área Empresarial -->
+    <div class="info-box derecha">
+      <img src="Imagenes/img20.jpg" alt="Servicios empresariales">
+      <div class="texto">
+        <h2>Área Empresarial</h2>
+        <p>
+          Disponibilidad en:<br><br>
+          Mantenimientos preventivos:
+          Realizamos visitas mensuales o bimensuales para revisar, limpiar y optimizar tus sistemas.
+          Esto ayuda a prolongar la vida útil del equipo y a prevenir fallas costosas.<br><br>
+          
+          Mantenimientos correctivos:<br>
+          Atendemos cualquier tipo de falla o avería con rapidez y profesionalismo. Garantizamos soluciones efectivas 
+          para mantener la continuidad de tus operaciones.<br>
+        </p>
+      </div>
+    </div>
+
+
+    <!-- 🔸 Cuadro 3: Area Industrial -->
+    <div class="info-box izquierda">
+      <img src="Imagenes/img38.jpg" alt="Equipo Soluteck">
+      <div class="texto">
+        <h2>Area Industrial</h2>
+        <p>En nuestra área empresarial, ofrecemos soluciones confiables y personalizadas para cada tipo de cliente.
+         Contamos con disponibilidad en:<br><br>
+         
+         Diagnóstico e instalaciones:
+         Realizamos evaluaciones precisas del estado de tus equipos e instalaciones eléctricas 
+         o de climatización, asegurando un funcionamiento óptimo desde el primer día.<br><br>
+
+         Mantenimiento preventivo (mensual o bimensual):
+         Diseñamos planes de mantenimiento adaptados a tus necesidades, evitando fallas,
+         optimizando el rendimiento y prolongando la vida útil de tus sistemas.<br><br>
+
+         Mantenimiento correctivo:
+         Brindamos atención rápida y eficiente ante cualquier avería o falla técnica, 
+         garantizando la continuidad operativa de tu empresa o negocio.<br>
+</p>
+      </div>
+    </div>
+
+     <!-- 🔸 Cuadro 4: Área RESIDENCIAL -->
+    <div class="info-box derecha">
+      <img src="Imagenes/img43.jpg" alt="Servicios empresariales">
+      <div class="texto">
+        <h2>Área Residencial</h2>
+        <p>
+         En Soluteck, también cuidamos el confort y la seguridad de tu hogar.
+         Ofrecemos servicios especializados para mantener tus sistemas 
+         en óptimas condiciones, con atención personalizada y resultados duraderos.<br>
+
+         Disponibilidad en:<br><br>
+         
+         Instalaciones estándar:
+         Realizamos la instalación profesional de equipos de aire acondicionado y sistemas eléctricos, cumpliendo con 
+         los más altos estándares de calidad y seguridad.<br><br>
+          
+         Suministro de equipo e instalaciones:
+         Te asesoramos en la elección del equipo adecuado para tu vivienda y realizamos la instalación completa, 
+         asegurando eficiencia energética y funcionamiento confiable.<br><br>
+
+         Mantenimientos preventivos:
+         Realizamos revisiones periódicas para garantizar el rendimiento ideal de tus equipos, 
+         evitando fallas y reduciendo el consumo energético.<br>
+
+        </p>
+      </div>
+    </div>
+
+     <!-- 🔸 Cuadro 5: IMPORTANCIA -->
+      <div class="info-box center">
+        <h2>Importancia del Mantenimiento</h2>
+        <p>
+         Cuidar los sistemas de aire acondicionado y electricidad en tu hogar no solo garantiza confort y bienestar, sino también seguridad y eficiencia energética.
+         Un mantenimiento adecuado y la instalación correcta de equipos reducen riesgos de fallas, prolongan la vida útil de los sistemas y evitan gastos innecesarios por reparaciones.<br><br>
+
+         En Soluteck, nuestra experiencia de más de 10 años nos permite ofrecer soluciones confiables, personalizadas y seguras para cada hogar, asegurando que tu familia disfrute de un ambiente cómodo, 
+         saludable y seguro todo el año.
+
+      </div>
+
+    <div style="text-align:center; margin-top: 30px;">
+      <a href="index.html" class="btn-volver">⬅ Volver al inicio</a>
+    </div>
+
+  </div>
+
+  <footer>
+    © <span id="year"></span> SOLUTECK
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+<script>
+  const boxes = document.querySelectorAll('.info-box');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.2 // Cuando el 20% del cuadro esté visible
+  });
+
+  boxes.forEach(box => observer.observe(box));
+</script>
+
+</body>
+</html>
