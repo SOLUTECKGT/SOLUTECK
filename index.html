@@ -321,5 +321,98 @@
   </script>
 
   </script>
+
+
+
+  <style>
+/* 🔹 GALERÍA CON ANIMACIÓN */
+
+/* Efecto inicial botones de galería */
+.galeria-btn {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+/* Cuando es visible al hacer scroll */
+.galeria-btn.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover galería */
+.galeria-btn:hover {
+  transform: scale(1.05);
+  background-color: #eaf1ff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.galeria-btn:hover img {
+  transform: scale(1.08);
+}
+
+.galeria-btn:hover span {
+  color: #002b80;
+}
+
+.galeria-btn::after {
+  content: "¡Click aquí!";
+  position: absolute;
+  bottom: 15px;
+  opacity: 0;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(5, 51, 156, 0.9);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
+}
+
+.galeria-btn:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🔹 BURBUJAS DE CONTACTO ANIMADAS */
+.bubble {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.bubble.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover burbujas */
+.bubble:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+</style>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // 🔹 Animación fade-in al hacer scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const galeriaBtns = document.querySelectorAll('.galeria-btn');
+      const bubbles = document.querySelectorAll('.bubble');
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if(entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.2 });
+
+      galeriaBtns.forEach(btn => observer.observe(btn));
+      bubbles.forEach(bub => observer.observe(bub));
+    });
+  </script>
 </body>
 </html>

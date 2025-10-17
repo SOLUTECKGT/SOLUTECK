@@ -29,11 +29,19 @@
       object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
+      opacity: 0;
+      transform: translateY(30px);
     }
 
+    /* Hover: zoom */
     .galeria img:hover {
       transform: scale(1.05);
+    }
+
+    .galeria img.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .volver {
@@ -44,7 +52,14 @@
       color: white;
       border-radius: 6px;
       text-decoration: none;
+      transition: all 0.3s ease;
     }
+
+    .volver:hover {
+      background: #0073ff;
+      transform: scale(1.05);
+    }
+
   </style>
 </head>
 <body>
@@ -63,10 +78,24 @@
       <img src="electricidad/img10.jpg" alt="Trabajo 10">
       <img src="electricidad/img11.jpg" alt="Trabajo 11">
       <img src="electricidad/img12.jpg" alt="Trabajo 12">
-
     </div>
 
     <a href="index.html" class="volver">← Volver al inicio</a>
   </div>
+
+  <script>
+    // 🔹 Animación fade-in al hacer scroll
+    const images = document.querySelectorAll('.galeria img');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    images.forEach(img => observer.observe(img));
+  </script>
 </body>
 </html>
